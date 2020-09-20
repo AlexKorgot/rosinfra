@@ -1,0 +1,163 @@
+@import "src/assets/sass/fonts"
+@import "src/assets/sass/variables"
+@import "src/assets/sass/hooper.slider.custom"
+html, body
+  min-width: 1920px
+  width: 100%
+  font-size: 16px
+  color: var(--primary-color)
+  font-family: 'SF UI Display', sans-serif
+  overflow: hidden
+  line-height: 1.2
+
+*, *:before, *:after
+  box-sizing: border-box
+#app
+  height: 100vh
+  background: url("../img/bg.svg") no-repeat center top
+  background-size: cover
+h1, h2, h3, p, ul, li
+  margin: 0!important
+  padding: 0!important
+  font-weight: normal !important
+.h1
+  color: var(--primary-color)
+  font-size: 67px
+  font-weight: 500
+  display: block
+.h3
+  font-size: 35px
+  font-weight: 300
+img
+  max-width: 100%
+.app__wrapper
+  padding: 33px 58px
+  height: 100%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+.app__content
+  display: flex
+  flex: 1 1 auto
+  align-items: center
+.app__header
+  display: flex
+  justify-content: space-between
+  align-items: center
+.app__footer
+  flex: 1 1 auto
+  display: flex
+  align-items: flex-end
+  background: transparent
+.container
+  width: 100%
+.container__home
+  display: flex
+  align-items: center
+.home
+  padding-left: 58px
+  &__tittle
+    max-width: 876px
+    color: var(--primary-color)
+    font-size: 67px
+    font-weight: 500
+    display: block
+    margin-bottom: 18px
+  &__subtittle
+    font-weight: 300
+    max-width: 735px
+    display: block
+    opacity: .7
+    &.h2
+      font-size: 35px
+      margin-bottom: 82px
+
+.btn__block
+  display: flex
+  justify-content: space-between
+  max-width: 720px
+.btn
+  cursor: pointer
+  transition: all .2s ease-in-out
+  color: #fff
+  font-size: 20px
+  display: inline-block
+  border-radius: 50px
+  text-align: center
+  padding: 15px 30px
+  font-weight: 500
+  line-height: 50px
+  &-header
+    font-size: 18px
+    padding: 20px
+    line-height: 18px
+    width: 259px
+  &-primary
+    background-color: var(--primary-color)
+    &.box-shadow
+      -webkit-box-shadow: 0 0 0 10px rgba(35, 52, 107, 0.1)
+      -moz-box-shadow: 0 0 0 10px rgba(35, 52, 107, 0.1)
+      box-shadow: 0 0 0 10px rgba(35, 52, 107, 0.1)
+  &-white
+    display: flex
+    align-items: center
+    background: #fff
+    border: 1px solid #DDE0E9
+    color: #9199B5
+    img
+      margin-right: 9px
+  &:active
+    transform: scale(.9)
+.content-wrapper
+  padding-left: 59px
+  padding-right: 44px
+  flex: 0 0 100%
+  display: flex
+  align-items: center
+  height: 541px
+  position: relative
+  justify-content: space-between
+  .play-buttons
+    position: absolute
+    left: 50%
+    top: 50%
+    margin-left: -95px
+    margin-top: -95.5px
+    z-index: 99999
+  &__viedo
+    width: 860px
+    height: 541px
+    overflow: hidden
+    box-shadow: -15px -15px 30px rgba(242, 243, 246, 0.3), 15px 15px 30px rgba(145, 153, 181, 0.2)
+    border-radius: 10px
+  &__tittle
+    font-size: 67px
+    font-weight: 500
+    margin-bottom: 41px
+  &__subtittle
+    font-size: 20px
+    font-weight: 300
+    max-width: 649px
+    color: #4F5D89
+    line-height: 1.6
+    margin-bottom: 40px
+  &__service
+    font-size: 18px
+    color: #FFFFFF
+    background: #B52528
+    border-radius: 15px
+    font-weight: 500
+    text-align: center
+    max-width: 88px
+    padding: 4.5px 0
+    margin-bottom: 18px
+  &__ul
+    ul
+      list-style-type: none
+      li
+        background: url("../../assets/img/icon_list.svg") no-repeat left center
+        font-weight: 300!important
+        padding-left: 40px!important
+        padding-bottom: 7.5px!important
+        padding-top: 7.5px!important
+        color: #4F5D89 !important
