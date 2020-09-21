@@ -1,9 +1,10 @@
+
 const video = {
     methods: {
-        play(){
-            let vid = document.getElementById("video");
-            vid.requestFullscreen()
-            vid.play();
+        play(index){
+            window.$.fancybox.open({
+                src: `${'#video' + index}`,
+            })
         }
     }
 }

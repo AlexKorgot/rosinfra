@@ -1,8 +1,6 @@
 <template lang="pug">
 .container
-    .content-wrapper(@click="play()")
-      .play-buttons
-        img(:src="require('@/assets/img/play_button.svg')")
+    .content-wrapper(@click.prevent="play(video.id)")
       .content__descriptions
         .content-wrapper__service Сервис
         .content-wrapper__tittle ГЧП-Академия
@@ -15,14 +13,25 @@
             li Подготовка проектных команд в регионах на примере реальных проектов
             li ГЧП-словарь – ключевые термины рынка ГЧП в интерактивном формате
       .content-wrapper__viedo
-        video(id="video" poster="@/assets/video/preview.svg")
-          source(:src="require('@/assets/video/video.mp4')" type='video/mp4' )
+        fancy-box(:field="video")
 </template>
 
 <script>
 import {video} from '../mixins/play.video'
+import fancyBox from "@/components/fancybox-simple";
 export default {
   name: "Academy",
+  components: {
+    fancyBox
+  },
+  data: function () {
+    return {
+      video: {
+        src: `${require('@/assets/video/video.mp4')}`,
+        id: '_academy'
+      }
+    }
+  },
   mixins: [video]
 }
 </script>

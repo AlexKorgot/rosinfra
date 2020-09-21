@@ -14,7 +14,7 @@
           slide-items(:field="item")
     .home__slider.slider-two
       slick(ref="slick" :options="sliderSettings")
-        div(v-for="(item, i) in slider" :key="i")
+        div(v-for="(item, i) in slider2" :key="i")
           slide-items(:field="item")
 </template>
 
@@ -29,20 +29,26 @@ export default {
       sliderSettings: {
         slidesToShow: 3,
         slidesToScroll: 1,
+        // swipeToSlide: true,
         autoplay: true,
         cssEase: "ease",
         infinite: true,
+        // draggable: true,
         autoplaySpeed: 2000,
+        // focusOnSelect: true,
         speed: 2000,
-        touchMove: true,
-        pauseOnHover: false,
+        // touchMove: true,
+        // pauseOnHover: true,
+        lazyLoad: 'progressive',
         useTransform: true,
         useCSS: true,
         arrows: false,
         vertical: true,
         verticalSwiping: true,
+        waitForAnimate: true,
      },
      slider: [
+
        {
          title: "База проектов",
          subTitle: "Крупнейшая база планируемых и реализуемых проектов",
@@ -56,10 +62,10 @@ export default {
          url: 'academy'
        },
        {
-         title: "База партнёров",
-         subTitle: "Поиск партнеров на любом этапе подготовки и реализации проекта",
-         image: `${require('@/assets/img/icon_partner.svg')}`,
-         url: 'partner'
+         title: "Новости",
+         subTitle: "Актуальные новости рынка ГЧП и мнения экспертов",
+         image: `${require('@/assets/img/icon_news.svg')}`,
+         url: 'news'
        },
        {
          title: "Тренды и аналитика",
@@ -74,12 +80,50 @@ export default {
          url: 'help'
        },
        {
+         title: "База партнёров",
+         subTitle: "Поиск партнеров на любом этапе подготовки и реализации проекта",
+         image: `${require('@/assets/img/icon_partner.svg')}`,
+         url: 'partners'
+       },
+     ],
+     slider2: [
+       {
+         title: "Тренды и аналитика",
+         subTitle: "Актуальные данные по рынку инфраструктуры и ГЧП",
+         image: `${require('@/assets/img/icon_trends.svg')}`,
+         url: 'trends'
+       },
+       {
+         title: "База партнёров",
+         subTitle: "Поиск партнеров на любом этапе подготовки и реализации проекта",
+         image: `${require('@/assets/img/icon_partner.svg')}`,
+         url: 'partners'
+       },
+       {
+         title: "База проектов",
+         subTitle: "Крупнейшая база планируемых и реализуемых проектов",
+         image: `${require('@/assets/img/icon_project.svg')}`,
+         url: 'project'
+       },
+       {
+         title: "Помощь экспертов",
+         subTitle: "Онлайн-консультации по вопросам применения механизмов ГЧП",
+         image: `${require('@/assets/img/icon_helps.svg')}`,
+         url: 'help'
+       },
+       {
          title: "Новости",
          subTitle: "Актуальные новости рынка ГЧП и мнения экспертов",
          image: `${require('@/assets/img/icon_news.svg')}`,
          url: 'news'
-       }
-     ]
+       },
+       {
+         title: "ГЧП-Академия",
+         subTitle: "Непрерывное развитие профильных компетенций",
+         image: `${require('@/assets/img/icon_academy.svg')}`,
+         url: 'academy'
+       },
+      ]
     }
   },
   methods: {

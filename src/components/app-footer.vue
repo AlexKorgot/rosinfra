@@ -96,8 +96,9 @@ export default {
     font-weight: 500
     font-size: 20px
     text-align: center
-    padding: 39px 30px 39px 30px
+    padding: 39px 10px 39px 10px
     transition: all .3s ease-in-out
+    border: 1px solid #fff
     &.active
       position: relative
       z-index: 999
@@ -123,4 +124,5 @@ export default {
           opacity: 1
     &__img
       margin-bottom: 19px
+      height: 70px
 </style>

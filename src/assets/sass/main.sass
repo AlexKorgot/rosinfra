@@ -127,6 +127,7 @@ img
   height: 541px
   position: relative
   justify-content: space-between
+  z-index: 1
   .play-buttons
     position: absolute
     left: 50%
@@ -134,6 +135,7 @@ img
     margin-left: -95px
     margin-top: -95.5px
     z-index: 99999
+    display: block
   &__viedo
     width: 860px
     height: 541px
@@ -171,3 +173,20 @@ img
         padding-bottom: 7.5px!important
         padding-top: 7.5px!important
         color: #4F5D89 !important
+.fancybox-slide
+  padding: 0!important
+.fancybox-content
+  width: 100%!important
+  overflow: hidden!important
+.fancybox-close-small
+  bottom: 57px
+  left: 50%
+  margin-left: -34.5px
+  width: 75px
+  height: 75px
+  background: url('../../assets/img/close_button.svg') no-repeat center top
+  background-size: cover
+  right: inherit
+  top: inherit
+  svg
+    display: none
