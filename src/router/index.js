@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home'
+import Services from "@/views/Services";
 import About from '../views/About'
 import Projects from "../views/Projects";
 import Partner from "@/views/Partner";
@@ -20,60 +21,66 @@ const routes = [
     }
   },
   {
-    path: "/about",
-    name: "about",
-    component: About,
-    meta: {
-      footer: true
-    }
-  },
-  {
-    path: "/project",
-    name: "project",
-    component: Projects,
-    meta: {
-      footer: true
-    }
-  },
-  {
-    path: "/partners",
-    name: "partners",
-    component: Partner,
-    meta: {
-      footer: true
-    }
-  },
-  {
-    path: "/academy",
-    name: "academy",
-    component: Academy,
-    meta: {
-      footer: true
-    }
-  },
-  {
-    path: "/trends",
-    name: "trends",
-    component: Trends,
-    meta: {
-      footer: true
-    }
-  },
-  {
-    path: "/help",
-    name: "help",
-    component: Helps,
-    meta: {
-      footer: true
-    }
-  },
-  {
-    path: "/news",
-    name: "news",
-    component: News,
-    meta: {
-      footer: true
-    }
+    path: '/services',
+    component: Services,
+    children: [
+      {
+        path: "/about",
+        name: "about",
+        component: About,
+        meta: {
+          footer: true
+        }
+      },
+      {
+        path: "/project",
+        name: "project",
+        component: Projects,
+        meta: {
+          footer: true
+        }
+      },
+      {
+        path: "/partners",
+        name: "partners",
+        component: Partner,
+        meta: {
+          footer: true
+        }
+      },
+      {
+        path: "/academy",
+        name: "academy",
+        component: Academy,
+        meta: {
+          footer: true
+        }
+      },
+      {
+        path: "/trends",
+        name: "trends",
+        component: Trends,
+        meta: {
+          footer: true
+        }
+      },
+      {
+        path: "/help",
+        name: "help",
+        component: Helps,
+        meta: {
+          footer: true
+        }
+      },
+      {
+        path: "/news",
+        name: "news",
+        component: News,
+        meta: {
+          footer: true
+        }
+      }
+    ]
   }
 ]
 

@@ -8,9 +8,6 @@
       .app__content
         transition(name="fade" mode="out-in")
           router-view
-      transition(name="fade-footer")
-        .app__footer(v-if="isVisible")
-            app-footer
 </template>
 <script>
 import AppFooter from "./components/app-footer.vue"
@@ -40,17 +37,13 @@ export default {
   outline: none!important
 .fade-enter-active,
 .fade-leave-active
-  transition-duration: .1s
-  transition-property: opacity
-  transition-timing-function: ease
+  transition: all .3s ease-in-out
 .fade-enter,
 .fade-leave-active
   opacity: 0
 .fade-footer-enter-active,
 .fade-footer-leave-active
-  transition-duration: .3s
-  transition-property: opacity
-  transition-timing-function: ease
+  transition: all 3s ease-in-out
 .fade-footer-enter,
 .fade-footer-leave-active
   opacity: 0

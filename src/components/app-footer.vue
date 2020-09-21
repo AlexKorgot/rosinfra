@@ -89,13 +89,14 @@ export default {
     position: relative
     opacity: .7
     width: 230px
+    height: 195px
     background: #fff
     box-shadow: -15px -15px 30px rgba(242, 243, 246, 0.3), 15px 15px 30px rgba(145, 153, 181, 0.1)
     border-radius: 10px
     font-weight: 500
     font-size: 20px
     text-align: center
-    padding: 39px
+    padding: 39px 30px 39px 30px
     transition: all .3s ease-in-out
     &.active
       position: relative
