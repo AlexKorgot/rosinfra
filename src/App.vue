@@ -1,11 +1,11 @@
 <template lang="pug">
-  #app
-    .app__wrapper
-      .app__header()
+  #app(:class="bgClass")
+    .app__wrapper()
+      .app__header
         img(src="@/assets/img/logo.svg" @click="goToHome()")
         transition(name="fade")
           .btn.btn-primary.btn-header(v-if="isVisible") Перейти к сервисам
-      .app__content
+      .app__content(@click="goToContents()")
         transition(name="fade" mode="out-in")
           router-view
 </template>
@@ -14,10 +14,24 @@ import AppFooter from "./components/app-footer.vue"
 
 export default {
   name: "App",
+  data: function (){
+    return {
+      route: ""
+    }
+  },
   components: {
     AppFooter
   },
   methods: {
+    goToContents(){
+      if(this.$route.name === "Home"){
+        this.$router.push({
+          name: 'Contents'
+        })
+      } else {
+        return false
+      }
+    },
     goToHome() {
       this.$router.push({
         name: 'Home'
@@ -25,12 +39,12 @@ export default {
     }
   },
   computed: {
+    bgClass(){
+      return this.$route.name === "Contents"? "app-bg-contents": ''
+    },
     isVisible() {
       return this.$route.meta && this.$route.meta.footer
     }
-  },
-  created(){
-
   }
 }
 </script>

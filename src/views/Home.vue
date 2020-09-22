@@ -5,15 +5,15 @@
       .home__subtittle.h2 Комплексное цифровое решение для работы с инфраструктурными проектами
       .btn__block
         .btn.btn-primary.box-shadow(@click="goTo") Начать знакомство с сервисами
-        .btn.btn-white
+        a.btn.btn-white(@click.stop="goToPlatform()" href="https://rosinfra.ru/" target="_blank")
           img(src="@/assets/img/icon_platform.svg")
           span Перейти на платформу
     .home__slider
-      slick(ref="slick" :options="sliderSettings")
+      slick(ref="slick" :options="sliderSettings" @swipe="hendler")
         div(v-for="(item, i) in slider" :key="i")
           slide-items(:field="item")
     .home__slider.slider-two
-      slick(ref="slick" :options="sliderSettings")
+      slick(ref="slick" :options="sliderSettings2")
         div(v-for="(item, i) in slider2" :key="i")
           slide-items(:field="item")
 </template>
@@ -46,7 +46,30 @@ export default {
         vertical: true,
         verticalSwiping: true,
         waitForAnimate: true,
+        swipeToSlide: true
      },
+      sliderSettings2: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        // swipeToSlide: true,
+        autoplay: true,
+        cssEase: "ease",
+        infinite: true,
+        // draggable: true,
+        autoplaySpeed: 2000,
+        // focusOnSelect: true,
+        speed: 2000,
+        // touchMove: true,
+        // pauseOnHover: true,
+        lazyLoad: 'progressive',
+        useTransform: true,
+        useCSS: true,
+        arrows: false,
+        vertical: true,
+        verticalSwiping: true,
+        waitForAnimate: true,
+        swipeToSlide: true
+      },
      slider: [
 
        {
@@ -127,6 +150,12 @@ export default {
     }
   },
   methods: {
+    hendler(event, slick, direction){
+      console.log(direction)
+    },
+    goToPlatform(){
+
+    },
     goTo(){
       this.$router.push({
         name: 'about'

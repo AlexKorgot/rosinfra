@@ -16,6 +16,8 @@ html, body
   height: 100vh
   background: url("../img/bg.svg") no-repeat center top
   background-size: cover
+  &.app-bg-contents
+    background: url("../img/bg2.svg") no-repeat 103% -20%
 h1, h2, h3, p, ul, li
   margin: 0!important
   padding: 0!important
@@ -41,6 +43,8 @@ img
   flex: 1 1 auto
   align-items: center
   transition: all .3s ease-in-out
+  position: relative
+  z-index: 95
 .app__header
   display: flex
   justify-content: space-between
@@ -55,9 +59,32 @@ img
   flex: 1 1 auto
   display: flex
   align-items: center
-.container__home
-  display: flex
-  align-items: center
+  &__home
+    display: flex
+    align-items: center
+  &__collections
+    padding: 0 58px
+  &__arrow
+    display: flex
+    align-items: center
+    justify-content: center
+    flex: 1 1 auto
+    flex-direction: column
+    .btn
+      padding: 0
+      margin-bottom: 26px
+      border-radius: 50%
+      width: 120px
+      height: 120px
+      display: flex
+      align-items: center
+      justify-content: center
+    span
+      font-size: 20px
+      font-weight: 500
+      width: 196px
+      margin: 0 auto
+      text-align: center
 .service__content
     display: flex
     flex-direction: column
@@ -114,6 +141,8 @@ img
     background: #fff
     border: 1px solid #DDE0E9
     color: #9199B5
+    position: relative
+    z-index: 99
     img
       margin-right: 9px
   &:active
@@ -190,3 +219,29 @@ img
   top: inherit
   svg
     display: none
+.fancybox-infobar
+  display: none!important
+.fancybox-toolbar
+  display: none!important
+.fancybox-active
+  //.fancybox-button
+  //  opacity: 1!important
+  //  visibility: visible!important
+  .fancybox-button--arrow_left
+    left: 70px!important
+    background: url('../../assets/img/prev.svg') no-repeat center top
+  .fancybox-button--arrow_right
+    right: 70px!important
+    background: url('../../assets/img/next.svg') no-repeat center top
+  .fancybox-button--arrow_left,
+  .fancybox-button--arrow_right
+    background-size: contain
+    width: 70px!important
+    height: 70px!important
+    padding: 0!important
+    top: inherit!important
+    bottom: 57px
+    div
+      display: none!important
+.slick-slide
+  will-change: transform

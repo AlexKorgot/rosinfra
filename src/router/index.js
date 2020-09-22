@@ -9,6 +9,7 @@ import Academy from "@/views/Academy";
 import Trends from "@/views/Trends";
 import Helps from "@/views/Helps";
 import News from "@/views/News";
+import Contents from "@/views/Contents";
 Vue.use(VueRouter)
 
 const routes = [
@@ -16,6 +17,14 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
+    meta: {
+      footer: false,
+    }
+  },
+  {
+    path:"/contents",
+    name: "Contents",
+    component: Contents,
     meta: {
       footer: false
     }
