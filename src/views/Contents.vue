@@ -3,7 +3,7 @@
     .container__collections
       fancy-collections(:field="items")
     .container__arrow
-      .btn.btn-primary.box-shadow(@click="goTo()")
+      a.btn.btn-primary.box-shadow(href="https://rosinfra.ru/" target="_blank")
         img(:src="require('@/assets/img/arrow.svg')")
       span Перейти на платформу
 </template>
