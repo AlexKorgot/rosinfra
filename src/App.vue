@@ -4,7 +4,7 @@
       .app__header
         img(src="@/assets/img/logo.svg" @click="goToHome()")
         transition(name="fade")
-          .btn.btn-primary.btn-header(v-if="isVisible") Перейти к сервисам
+          .btn.btn-primary.btn-header(v-if="isVisible" @click="goToServices()") Перейти к сервисам
       .app__content(@click="goToContents()")
         transition(name="fade" mode="out-in")
           router-view
@@ -23,6 +23,30 @@ export default {
     AppFooter
   },
   methods: {
+    goToServices(){
+      switch(this.$route.name){
+        case "about":
+          window.open("https://rosinfra.ru/", "_blank")
+          break
+        case "project":
+          window.open("https://rosinfra.ru/project", "_blank")
+          break
+        case "partners":
+          window.open("https://rosinfra.ru/companies", "_blank")
+          break
+        case "academy":
+          window.open("https://rosinfra.ru/academy", "_blank")
+          break
+        case "trends":
+          window.open("https://rosinfra.ru/digest", "_blank")
+          break
+        case "help":
+          window.open("https://rosinfra.ru/home/landing/experts", "_blank")
+          break
+        case "news":
+          window.open("https://rosinfra.ru/news", "_blank")
+      }
+    },
     goToContents(){
       if(this.$route.name === "Home"){
         this.$router.push({

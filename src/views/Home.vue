@@ -9,11 +9,11 @@
           img(src="@/assets/img/icon_platform.svg")
           span Перейти на платформу
     .home__slider
-      slick(ref="slick" :options="sliderSettings" @swipe="hendler")
+      slick(ref="slick" :options="sliderSettings")
         div(v-for="(item, i) in slider" :key="i")
           slide-items(:field="item")
     .home__slider.slider-two
-      slick(ref="slick" :options="sliderSettings2")
+      slick(ref="slick2" :options="sliderSettings2")
         div(v-for="(item, i) in slider2" :key="i")
           slide-items(:field="item")
 </template>
@@ -53,6 +53,7 @@ export default {
         slidesToScroll: 1,
         // swipeToSlide: true,
         autoplay: true,
+        verticalReverse: true,
         cssEase: "ease",
         infinite: true,
         // draggable: true,
@@ -150,9 +151,6 @@ export default {
     }
   },
   methods: {
-    hendler(event, slick, direction){
-      console.log(direction)
-    },
     goToPlatform(){
 
     },

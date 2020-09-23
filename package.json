@@ -10,7 +10,6 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "core-js": "^3.6.5",
-    "hooper": "^0.3.4",
     "jquery": "^3.5.1",
     "less": "^3.12.2",
     "less-loader": "^7.0.1",
