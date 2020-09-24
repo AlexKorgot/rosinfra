@@ -26,7 +26,9 @@ export default {
     goToServices(){
       switch(this.$route.name){
         case "about":
-          window.open("https://rosinfra.ru/", "_blank")
+          this.$router.push({
+            name: 'Contents'
+          })
           break
         case "project":
           window.open("https://rosinfra.ru/project", "_blank")
