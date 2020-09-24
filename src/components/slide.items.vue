@@ -28,7 +28,7 @@ export default {
   box-shadow: -15px -15px 30px rgba(242, 243, 246, 0.3), 15px 15px 30px rgba(145, 153, 181, 0.2)
   border-radius: 10px
   padding: 28px 32px
-  margin-bottom: 30px
+  //margin-bottom: 30px
   img
     max-width: 72px
     display: block

@@ -9,19 +9,20 @@
           img(src="@/assets/img/icon_platform.svg")
           span Перейти на платформу
     .home__slider
-      slick(ref="slick" :options="sliderSettings")
-        div(v-for="(item, i) in slider" :key="i")
+      hooper(style="height: 900px" :vertical="true" :itemsToShow="3" :shortDrag="false" :playSpeed="3000" :transition="1000" :autoPlay="true"  :infiniteScroll="true")
+        slide(v-for="(item, i) in slider" :key="i")
           slide-items(:field="item")
     .home__slider.slider-two
-      slick(ref="slick2" :options="sliderSettings2")
-        div(v-for="(item, i) in slider2" :key="i")
+      hooper(style="height: 900px" :vertical="true" :itemsToSlide="-1" :rtl="rtl" :itemsToShow="3" :playSpeed="3000" :transition="1000" :autoPlay="true"  :infiniteScroll="true")
+        slide(v-for="(item, i) in slider2" :key="i")
           slide-items(:field="item")
 </template>
 
 <script>
-import Slick from 'vue-slick';
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 import slideItems from '../components/slide.items'
+import { Hooper, Slide } from 'hooper';
+import 'hooper/dist/hooper.css';
 export default {
   name: "Home",
   data: function () {
@@ -161,11 +162,16 @@ export default {
     }
   },
   components: {
-    Slick,
-    slideItems
+    slideItems,
+    Hooper,
+    Slide
   }
 }
 </script>
 
 <style lang="sass">
+.hooper-list
+  overflow: initial
+.hooper-slide
+  //margin-bottom: 30px!important
 </style>
